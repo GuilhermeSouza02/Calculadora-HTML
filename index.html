@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width', initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <header>
+    <div id="calculator">
+        
+    <h1>Calculadora</h1>
+    <form action="">
+        <input id="num1" type="text" placeholder="Insira um valor"></input>
+        <input id="num2" type="text" placeholder="Insira um valor"></input>
+        <div class="buttons">
+        <button id="A" type="button" class="btsoma" onclick="operacao('+')">+</button>
+        <button id="A" type="button" class="btsub" onclick="sub('-')">-</button>
+        <button id="A" type="button" class="btmult" onclick="mult('*')">x</button>
+        <button id="A" type="button" class="btdivi" onclick="divi('/')">÷</button>
+        
+    </div>
+    
+        <input id="soma" type="text" disabled></input>
+        <button class="btreset" onclick="reset">Limpar</button>
+    </form>
+        
+</div>
+</header>
+
+<script>
+    function operacao(op){
+        var num1, num2, soma;
+        num1 = parseFloat(document.getElementById("num1").value);
+        num2 = parseFloat(document.getElementById("num2").value);
+        soma = num1 + num2;
+
+        document.getElementById("soma").value = soma;
+
+        
+
+    }
+</script>
+
+<script>
+    function sub(){
+        var sub = num1 - num2;
+        num1 = parseFloat(document.getElementById("num1").value);
+        num2 = parseFloat(document.getElementById("num2").value);
+
+        sub = num1 - num2;
+
+        document.getElementById("soma").value = sub;
+
+        
+
+    }
+</script>
+
+<script>
+    function mult(){
+        var mult = num1 * num2;
+        num1 = parseFloat(document.getElementById("num1").value);
+        num2 = parseFloat(document.getElementById("num2").value);
+
+        mult = num1 * num2;
+
+        document.getElementById("soma").value = mult;
+
+        
+
+    }
+</script>
+
+<script>
+    function divi(){
+        var divi = num1 / num2;
+        num1 = parseFloat(document.getElementById("num1").value);
+        num2 = parseFloat(document.getElementById("num2").value);
+
+        divi = num1 / num2;
+
+        document.getElementById("soma").value = divi;
+
+        
+
+    }
+</script>
+
+</body>
+</html>
